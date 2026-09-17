@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
+  envPrefix: ['VITE_', 'EMAILJS_'],
   build: {
     rollupOptions: {
       output: {
