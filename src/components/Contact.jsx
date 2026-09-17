@@ -12,12 +12,12 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
 // ─────────────────────────────────────────────────
-// EMAILJS CONFIG — Fill these after setting up your
-// free account at https://www.emailjs.com
+// EMAILJS CONFIG — Loaded securely from environment variables
+// (Define VITE_EMAILJS_* in .env locally or in Vercel settings)
 // ─────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = 'service_h5gmt87';
-const EMAILJS_TEMPLATE_ID = 'template_njfves7';
-const EMAILJS_PUBLIC_KEY  = '3CCdCTWIf5rqwooBr';
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
 export default function Contact() {
   const { socialLinks } = portfolioData;
